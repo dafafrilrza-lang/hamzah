@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiket Bioskop McQueen</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
+    body {
+      background: linear-gradient(135deg, #b30000, #ff1a1a);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .container {
+      background: #111;
+      max-width: 1000px;
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    header {
+      background: url('https://i.imgur.com/8Km9tLL.jpg') center/cover no-repeat;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #ffcc00;
+      text-shadow: 2px 2px 6px #000;
+    }
+    header p { margin-top: 10px; }
+
+    .content {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #1c1c1c;
+      border-radius: 12px;
+      padding: 20px;
+      border: 2px solid #ff1a1a;
+    }
+    .card h2 {
+      margin-bottom: 15px;
+      color: #ffcc00;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 0.9rem;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: none;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #ff1a1a;
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+    }
+    button:hover {
+      background: #ff3333;
+      transform: scale(1.03);
+    }
+
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>McQueen Cinema Ticket</h1>
+      <p>Speed. Style. Movie Time.</p>
+    </header>
+
+    <div class="content">
+      <div class="card">
+        <h2>Pilih Film</h2>
+        <label>Judul Film</label>
+        <select>
+          <option>Cars (Lightning McQueen)</option>
+          <option>Cars 2</option>
+          <option>Cars 3</option>
+        </select>
+        <label>Tanggal</label>
+        <input type="date" />
+        <label>Jam Tayang</label>
+        <select>
+          <option>13:00</option>
+          <option>16:00</option>
+          <option>19:00</option>
+        </select>
+      </div>
+
+      <div class="card">
+        <h2>Data Pemesan</h2>
+        <label>Nama</label>
+        <input type="text" placeholder="Nama Anda" />
+        <label>Jumlah Tiket</label>
+        <input type="number" min="1" max="10" value="1" />
+        <label>Kursi</label>
+        <input type="text" placeholder="Contoh: A3" />
+        <button>Pesan Tiket ⚡</button>
+      </div>
+    </div>
+
+    <footer>
+      © 2026 McQueen Cinema • Ka-chow! 🏁
+    </footer>
+  </div>
+</body>
+</html>
+
